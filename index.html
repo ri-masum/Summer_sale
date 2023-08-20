@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Assignment-5</title>
     <!-- tailwind and daisy UI -->
 
     <link
@@ -45,7 +45,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           <!-- cart one  -->
           <div
-            class="card bg-base-100 shadow-xl p-6 w-96"
+            class="card bg-base-100 shadow-xl p-6 lg:w-96"
             id="cart1"
             onclick="cart1()"
           >
@@ -128,7 +128,7 @@
                 />
               </div>
               <h2 id="card-title-2">Chop Board</h2>
-              <p>49.00 TK</p>
+              <p><span id="cart2-price">49.00</span> TK</p>
               <div class="card-actions"></div>
             </div>
           </div>
@@ -172,7 +172,7 @@
                 />
               </div>
               <h2 id="card-title-3">Home Cocker</h2>
-              <p>49.00 TK</p>
+              <p><span id="cart3-price">50.00</span> TK</p>
               <div class="card-actions"></div>
             </div>
           </div>
@@ -183,34 +183,40 @@
             <h1>Have coupon?</h1>
             <div class="relative">
               <input
+              id="cupon-code"
                 type="text"
-                placeholder="Coupon code"
+                placeholder="type sell20"
                 class="input input-bordered w-full pr-16"
+                
               />
-              <button
-                class="btn bg-pink-600 text-white absolute top-0 right-0 rounded-sm"
-              >
-                Apply
+              <button 
+              id="btn-cupon" 
+              disabled 
+              class="btn bg-pink-600 text-white absolute top-0 right-0 rounded-sm" > 
+               Apply
               </button>
             </div>
           </div>
           <div id="cart-list">
 
           </div>
-          <div id="price">
-
+          <div id="price" class="mt-5 border-t">
+              <h1>Price       : <span id="product-price">0</span></h1>
+              <h1>Discount    : <span id="discount-price">0</span></h1>
+              <h1>Total Price : <span id="total-price">0</span></h1>
+            <button id="btn-purchase" class="btn bg-pink-500 text-white" disabled>Make Purchase</button>
           </div>
         </div>
       </section>
       <!-- second cart -->
       <h1 class="text-4xl font-semibold lg:ml-40 mt-10">SportsWear</h1>
 
-      <section class="flex flex-col md:flex-row gap-3 lg:w-9/12 mx-auto">
+      <section class="flex flex-col md:flex-row gap-3 ">
         <!-- second container
              -->
         <!-- cart container -->
         <!-- fourth one  -->
-        <div class="card bg-base-100 shadow-xl p-6"   id="cart4" onclick="cart4()">
+        <div class="card bg-base-100 shadow-xl lg:w-96 lg:p-6"   id="cart4" onclick="cart4()">
           <figure class="px-10 pt-10 bg-gray-100 p-5">
             <img src="/images/prod4.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -245,13 +251,13 @@
               />
             </div>
             <h2 id="card-title-4">Sports Back Cap</h2>
-            <p>189.00 TK</p>
+            <p><span id="cart4-price">189.00</span> TK</p>
             <div class="card-actions"></div>
           </div>
         </div>
 
         <!-- fifth cart -->
-        <div class="card bg-base-100 shadow-xl p-6"   id="cart5" onclick="cart5()">
+        <div class="card bg-base-100 shadow-xl lg:p-6 lg:w-96"   id="cart5" onclick="cart5()">
           <figure class="px-10 pt-10 bg-gray-100 p-5">
             <img src="/images/prod5.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -286,12 +292,12 @@
               />
             </div>
             <h2 id="card-title-5">Full Jersey Set</h2>
-            <p>299.00 TK</p>
+            <p><span id="cart5-price">299.00</span> TK</p>
             <div class="card-actions"></div>
           </div>
         </div>
         <!-- sixth cart -->
-        <div class="card bg-base-100 shadow-xl p-6"   id="cart6" onclick="cart6()">
+        <div class="card bg-base-100 shadow-xl lg:p-6 lg:w-96"   id="cart6" onclick="cart6()">
           <figure class="px-10 pt-10 bg-gray-100 p-5">
             <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -326,7 +332,7 @@
               />
             </div>
             <h2 id="card-title-6">Sports cates</h2>
-            <p>339.00 TK</p>
+            <p><span id="cart6-price">339.00</span> TK</p>
             <div class="card-actions"></div>
           </div>
         </div>
