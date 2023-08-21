@@ -177,46 +177,68 @@
             </div>
           </div>
         </div>
+        
+
+
         <div>
           <!-- coupon apply -->
           <div>
             <h1>Have coupon?</h1>
             <div class="relative">
               <input
-              id="cupon-code"
+                id="cupon-code"
                 type="text"
                 placeholder="type sell20"
                 class="input input-bordered w-full pr-16"
-                
               />
-              <button 
-              id="btn-cupon" 
-              disabled 
-              class="btn bg-pink-600 text-white absolute top-0 right-0 rounded-sm" > 
-               Apply
+              <button
+                id="btn-cupon"
+                disabled
+                class="btn bg-pink-600 text-white absolute top-0 right-0 rounded-sm"
+              >
+                Apply
               </button>
             </div>
           </div>
-          <div id="cart-list">
-
-          </div>
+          <div id="cart-list"></div>
           <div id="price" class="mt-5 border-t">
-              <h1>Price       : <span id="product-price">0</span></h1>
-              <h1>Discount    : <span id="discount-price">0</span></h1>
-              <h1>Total Price : <span id="total-price">0</span></h1>
-            <button id="btn-purchase" class="btn bg-pink-500 text-white" disabled>Make Purchase</button>
+            <h1>Price : <span id="product-price">0</span></h1>
+            <h1>Discount : <span id="discount-price">0</span></h1>
+            <h1>Total Price : <span id="total-price">0</span></h1>
+        <!-- modal added -->
+            <a href="#my_modal_8"               class="btn bg-pink-500 text-white"
+            disabled id="btn-purchase">Make Purchase</a>
+
+            <div class="modal" id="my_modal_8">
+              <div class="modal-box">
+                <img src="./images/congo.png" alt="" class="w-1/2 mx-auto" />
+                <h3 class="font-bold text-lg text-center">Congratulations</h3>
+                <p class="py-4 text-center">Your Purchase the product</p>
+                <div class="modal-action">
+                  <a href="index.html" class="btn bg-pink-500 text-white"
+                    >Go Home</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+
       </section>
       <!-- second cart -->
       <h1 class="text-4xl font-semibold lg:ml-40 mt-10">SportsWear</h1>
 
-      <section class="flex flex-col md:flex-row gap-3 ">
+      <section class="flex flex-col md:flex-row gap-3">
         <!-- second container
              -->
         <!-- cart container -->
         <!-- fourth one  -->
-        <div class="card bg-base-100 shadow-xl lg:w-96 lg:p-6"   id="cart4" onclick="cart4()">
+        <div
+          class="card bg-base-100 shadow-xl lg:w-96 lg:p-6"
+          id="cart4"
+          onclick="cart4()"
+        >
           <figure class="px-10 pt-10 bg-gray-100 p-5">
             <img src="/images/prod4.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -257,7 +279,11 @@
         </div>
 
         <!-- fifth cart -->
-        <div class="card bg-base-100 shadow-xl lg:p-6 lg:w-96"   id="cart5" onclick="cart5()">
+        <div
+          class="card bg-base-100 shadow-xl lg:p-6 lg:w-96"
+          id="cart5"
+          onclick="cart5()"
+        >
           <figure class="px-10 pt-10 bg-gray-100 p-5">
             <img src="/images/prod5.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -297,7 +323,11 @@
           </div>
         </div>
         <!-- sixth cart -->
-        <div class="card bg-base-100 shadow-xl lg:p-6 lg:w-96"   id="cart6" onclick="cart6()">
+        <div
+          class="card bg-base-100 shadow-xl lg:p-6 lg:w-96"
+          id="cart6"
+          onclick="cart6()"
+        >
           <figure class="px-10 pt-10 bg-gray-100 p-5">
             <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
           </figure>

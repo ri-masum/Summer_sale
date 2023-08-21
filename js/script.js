@@ -100,7 +100,11 @@ function addTotalPrice(cartPrice) {
 
 function updatePurchaseBtn() {
   const btn = document.getElementById("btn-purchase");
-  btn.disabled = totalPrice <= 0;
+//   btn.disabled = totalPrice <= 0;
+
+if(totalPrice>0){
+    btn.removeAttribute('disabled');
+}
   const btn2 = document.getElementById("btn-cupon");
   btn2.disabled = totalPrice <= 199;
 }
