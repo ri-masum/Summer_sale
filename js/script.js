@@ -80,6 +80,7 @@ function setTextElement(elementId, value) {
 // sum to carts
 
 let totalPrice = 0;
+let discountPrice=0;
 
 function updateProductPrice() {
   const productPriceElement = document.getElementById("product-price");
@@ -90,6 +91,8 @@ function addTotalPrice(cartPrice) {
   totalPrice += cartPrice;
   updateProductPrice();
   updatePurchaseBtn();
+  updateTotalPrice();
+
 //   updateCuponBtn(); //calling the function in cart section
 }
 
@@ -116,7 +119,13 @@ function updatePurchaseBtn() {
     const discountPrice = document.getElementById("discount-price");
     const discountAmount = totalPrice * 0.2;
     discountPrice.innerText=discountAmount.toFixed(2);
-    console.log('click');}
+    const totalPriceElement=document.getElementById('total-price');
+    const calculateTotalPrice=totalPrice-discountAmount;
+    console.log(calculateTotalPrice);
+    totalPriceElement.innerText=calculateTotalPrice.toFixed(2);
+    console.log('click');
+    // updateTotalPrice();
+}
     else{
         alert('cupon code is not correct')
       }
@@ -127,3 +136,17 @@ function updatePurchaseBtn() {
 // updateCuponBtn();
 updatePurchaseBtn();
 
+
+
+// discount bade ja price take ta ei function e kaj hobe 
+
+function updateTotalPrice(){
+
+    const totalPriceElement=document.getElementById('total-price');
+    const calculateTotalPrice=totalPrice-discountPrice;
+    console.log(calculateTotalPrice);
+    totalPriceElement.innerText=calculateTotalPrice.toFixed(2);
+
+
+}
+// updateTotalPrice();
