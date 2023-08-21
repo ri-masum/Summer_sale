@@ -119,7 +119,7 @@ if(totalPrice>0){
 //   updateProductPrice();
  
   btn2.addEventListener('click',function(){
-    if(cupon.value == "sell20"){
+    if(cupon.value == "SELL200"){
     const discountPrice = document.getElementById("discount-price");
     const discountAmount = totalPrice * 0.2;
     discountPrice.innerText=discountAmount.toFixed(2);

@@ -40,7 +40,7 @@
     <!-- cart section -->
     <main class="mt-20">
       <h1 class="text-4xl font-semibold lg:ml-40">Kitchenware</h1>
-      <section class="flex flex-col md:flex-row gap-3 justify-center">
+      <section class="flex flex-col md:flex-row gap-3 w-10/12 mx-auto ">
         <!-- cart container -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           <!-- cart one  -->
@@ -180,15 +180,15 @@
         
 
 
-        <div>
+        <div class=" relative lg:absolute   lg:right-10 " >
           <!-- coupon apply -->
-          <div>
+          <div >
             <h1>Have coupon?</h1>
             <div class="relative">
               <input
                 id="cupon-code"
                 type="text"
-                placeholder="type sell20"
+                placeholder="SELL200"
                 class="input input-bordered w-full pr-16"
               />
               <button
@@ -200,12 +200,15 @@
               </button>
             </div>
           </div>
-          <div id="cart-list"></div>
+          <div id="cart-list" class="fixed lg:sticky lg:top-0 lg:right-0 lg:z-50">
+
+
+          </div>
           <div id="price" class="mt-5 border-t">
             <h1>Price : <span id="product-price">0</span></h1>
             <h1>Discount : <span id="discount-price">0</span></h1>
             <h1>Total Price : <span id="total-price">0</span></h1>
-        <!-- modal added -->
+            <!-- modal added -->
             <a href="#my_modal_8"               class="btn bg-pink-500 text-white"
             disabled id="btn-purchase">Make Purchase</a>
 
@@ -229,7 +232,7 @@
       <!-- second cart -->
       <h1 class="text-4xl font-semibold lg:ml-40 mt-10">SportsWear</h1>
 
-      <section class="flex flex-col md:flex-row gap-3">
+      <section class="flex flex-col md:flex-row gap-3  w-10/12 mx-auto">
         <!-- second container
              -->
         <!-- cart container -->
